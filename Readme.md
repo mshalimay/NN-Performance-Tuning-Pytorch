@@ -1,3 +1,10 @@
+# Hyperparameter tuning and performance evaluation with Pytorch
+This Repository:
+- Implements the `ResNet18` model using Pytorch, with optional deptwhise-separable convolutions, as in MobileNet.
+- Experiment with different hyperparameter settings, including: 
+  - ResNet18 architechtures, schedulers, optimizers, learning rates, momentum, weight decay, etc. See `Usage` for a list of options.
+- Evaluates performance of estimated models, including inference time, # params and MACs
+
 # Files and directories description
 *   `./train.py`: script to train all the models with specified parameters
 *   `./experiments.py`: script to run train the models with different parameters
@@ -28,7 +35,7 @@ In this work there are three variations for the neural network architectures: _S
 
 **Table: Architechtures for ResNet** 
 
-![Alt text](<resnetArch.png>)
+![Alt text](<imgs/resnetArch.png>)
 
 ## ResMobile
 *   _ResMobile_ has the exact same structure as _ResNet_, except that all convolutional layers in _ResNet_ are subject to change to a depthwise separable convolutional (DSC) layer.

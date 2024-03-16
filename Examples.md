@@ -56,7 +56,7 @@ The following table shows all the individual accuracies obtained for the `ResNet
 		- Therefore, the improvement was equally impacted by the scheduler and initial learning rate and did not improve due to change in the optimizer (but again, this is not linear as in the math above)
 - This suggests that (i) comparing the accuracies for this case are not fully informative; (ii) `adadelta` might still be a good choice, even though does not gives strictly the higher performance (indeed, in CIFAR10 produces the best performance)
 
-![Alt text](<img1.png>)
+![Alt text](<imgs/img1.png>)
 
 Perhaps a better way of gaining knowledge about the tuning options that might be used further is analyzing the sensitivities of the accuracies relative to the variables. The three tables below shows the max change in accuracy when kept one tuple of LR, scheduler and optimizer constant.
 
@@ -80,13 +80,13 @@ Nonetheless, they give hints for tuning the parameters for more expensive tasks,
 *   be careful with choices of learning rates and schedulers when using `adam`
 *   a higher stability of results when using (adadelta, cosine) relative to variations in learning rates, which is a good feature since we do not know in principle which `lr` is good and cannot explore all possibilities as in here.
 
-![Alt text](<img3.png>)
-![Alt text](<img4.png>)
-![Alt text](<img5.png>)
+![Alt text](<imgs/img3.png>)
+![Alt text](<imgs/img4.png>)
+![Alt text](<imgs/img5.png>)
 
 ### CIFAR10 experiments
 For what follows, the following set of parameters were kept the same:
-![Alt text](img7.png>)
+![Alt text](<imgs/img7.png>)
 
 Besides the parameter tuning, I also tranform the CIFAR10 dataset as proposed in the original ResNet paper.
 
@@ -116,7 +116,7 @@ The tables below shows the accuracy of `ResNet18` for different learning rates, 
 *   `batch size` in general had small effects on accuracy. The exception is using the `sgd` optimizer, in which results were less sensible to the initial LR chosen with higher batch sizes.
 *   The `cosine` scheduler showed better accuracy/convergence behavior. In particular, the results were less sensible to the starting LR in the `sgd` case.
 
-![Alt text](image.png)
+![Alt text](imgs/image.png)
 
 ## Measuring Performance
 
@@ -153,5 +153,5 @@ The table below show the accuracies for each option, along with the performance 
     *   the comments above suggest that no, they are not; we should expect a reduction in latency, but this is not what was observed. And my best explanation for that are memory access patterns and lack of optimizations for the DS convolutions.
     *   Nonetheless, the size of the `pytorch` checkpoint files is reduced in a similar % as the reduction in memory footprint estimated.
 
-![Alt text](<img8.png>)
+![Alt text](<imgs/img8.png>)
 
