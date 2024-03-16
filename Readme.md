@@ -5,6 +5,8 @@ This Repository:
   - ResNet18 architechtures, schedulers, optimizers, learning rates, momentum, weight decay, etc. See `Usage` for a list of options.
 - Evaluates performance of estimated models, including inference time, # params and MACs
 
+See `Examples.md` for a simple run, hyperparameter exploration and performance evaluation
+
 # Files and directories description
 *   `./train.py`: script to train all the models with specified parameters
 *   `./experiments.py`: script to run train the models with different parameters
