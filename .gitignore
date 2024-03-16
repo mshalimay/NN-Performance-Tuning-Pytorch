@@ -1,0 +1,13 @@
+*.xlsx
+data/
+training_log/
+saved_models/
+zDeprecated/
+experiments_small*
+requirements.txt
+models/resmobile copy 2.py
+models/resmobile copy 3.py
+models/resmobile copy.py
+models/resnet_initial.py
+__pycache__/
+*.pyc
