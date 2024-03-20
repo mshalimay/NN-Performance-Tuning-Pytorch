@@ -1,4 +1,4 @@
-# Hyperparameter Tuning and Performance Evaluation with Pytorch
+# Hyperparameter Tuning and Latency Evaluation of ResNet with depth-wise-separable convolutions
 This Repository:
 - Implements the `ResNet18` model using Pytorch, with (optional) **DepthWise Separable Convolutions**, as in MobileNet.
 - Allow exploration of hyperparameter settings, including: 
